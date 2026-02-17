@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Lab Kumarkhali - Science & Technology Projects</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Research Lab Kumarkhali - Your trusted partner for school, college, and university level science projects, semester final projects, robotics, IoT, and science fair projects.">
+    <meta name="keywords" content="science projects, school projects, college projects, university projects, robotics, IoT, science fair, research lab, Kumarkhali, Bangladesh">
+    <meta name="author" content="Research Lab Kumarkhali">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-github-username.github.io/research-lab-kumarkhali/">
+    <meta property="og:title" content="Research Lab Kumarkhali - Science & Technology Projects">
+    <meta property="og:description" content="Innovating Science Projects for Future Minds. School, College, University Projects & More.">
+    <meta property="og:image" content="https://your-github-username.github.io/research-lab-kumarkhali/assets/og-image.jpg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        },
+                        accent: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+            to { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes particle {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            25% { transform: translate(10px, -20px) scale(1.2); opacity: 0.5; }
+            50% { transform: translate(-5px, -40px) scale(1); opacity: 0.3; }
+            75% { transform: translate(15px, -20px) scale(0.8); opacity: 0.4; }
+        }
+        
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #3b82f6, #10b981);
+            border-radius: 10px;
+        }
+        
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Card Hover Effects */
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .project-card:hover .card-image {
+            transform: scale(1.1);
+        }
+        
+        /* Image Slider */
+        .slider {
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Modal Animation */
+        .modal-content {
+            animation: slideUp 0.4s ease-out;
+        }
+        
+        /* Particle Background */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particle 8s infinite ease-in-out;
+        }
+        
+        /* Filter Button Active State */
+        .filter-btn.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+            color: white;
+        }
+        
+        /* Loading Spinner */
+        .loader {
+            border: 3px solid #f3f4f6;
+            border-top: 3px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin-slow 1s linear infinite;
+        }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .dark .glass {
+            background: rgba(30, 41, 59, 0.8);
+        }
+        
+        /* Hover Underline Effect */
+        .hover-underline {
+            position: relative;
+        }
+        
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+        
+        /* Line Clamp */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-1 {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300">
+    
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="glass border-b border-gray-200/50 dark:border-gray-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16 md:h-20">
+                    
+                    <!-- Logo -->
+                    <a href="#" class="flex items-center space-x-3 group">
+                        <div class="relative">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-primary-500/50 transition-shadow">
+                                <i class="fas fa-flask text-white text-lg md:text-xl"></i>
+                            </div>
+                            <div class="absolute -top-1 -right-1 w-3 h-3 bg-accent-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <div class="hidden sm:block">
+                            <h1 class="font-display font-bold text-lg md:text-xl text-gray-900 dark:text-white">
+                                Research Lab
+                            </h1>
+                            <p class="text-xs text-primary-600 dark:text-primary-400 font-medium -mt-1">Kumarkhali</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#home" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Home</a>
+                        <a href="#projects" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Projects</a>
+                        <a href="#services" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Services</a>
+                        <a href="#about" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">About</a>
+                        <a href="#contact" class="hover-underline text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors">Contact</a>
+                    </div>
+                    
+                    <!-- Right Actions -->
+                    <div class="flex items-center space-x-3">
+                        <!-- Dark Mode Toggle -->
+                        <button id="darkModeToggle" class="p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all">
+                            <i class="fas fa-moon text-lg dark:hidden"></i>
+                            <i class="fas fa-sun text-lg hidden dark:inline text-yellow-400"></i>
+                        </button>
+                        
+                        <!-- WhatsApp Button (Desktop) -->
+                        <a href="https://wa.me/8801XXXXXXXXX?text=Hello!%20I'm%20interested%20in%20your%20science%20projects." 
+                           target="_blank" 
+                           class="hidden sm:flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-xl shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all hover:scale-105">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Contact</span>
+                        </a>
+                        
+                        <!-- Mobile Menu Button -->
+                        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-bars text-lg" id="menuIcon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-700">
+                <div class="px-4 py-6 space-y-4 bg-white dark:bg-gray-900">
+                    <a href="#home" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 font-medium">Home</a>
+                    <a href="#projects" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 font-medium">Projects</a>
+                    <a href="#services" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 font-medium">Services</a>
+                    <a href="#about" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 font-medium">About</a>
+                    <a href="#contact" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary-600 font-medium">Contact</a>
+                    <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="flex items-center space-x-2 py-2 text-green-500 font-medium">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Contact on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+        
+        <!-- Animated Particles -->
+        <div id="particles" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+        
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" 
+             style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%233b82f6&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Floating Decorations -->
+            <div class="absolute -left-20 top-0 w-72 h-72 bg-primary-200 dark:bg-primary-900/30 rounded-full blur-3xl opacity-50 animate-float"></div>
+            <div class="absolute -right-20 bottom-0 w-96 h-96 bg-accent-200 dark:bg-accent-900/30 rounded-full blur-3xl opacity-50 animate-float" style="animation-delay: -3s;"></div>
+            
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-full shadow-lg mb-8 animate-fade-in">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span class="text-sm font-medium text-gray-600 dark:text-gray-300">Now Accepting Projects for 2024</span>
+            </div>
+            
+            <!-- Main Heading -->
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-slide-up">
+                <span class="gradient-text">Research Lab</span><br>
+                <span>Kumarkhali</span>
+            </h1>
+            
+            <!-- Tagline -->
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.1s;">
+                🔬 <span class="font-medium">Innovating Science Projects for Future Minds</span>
+            </p>
+            
+            <!-- Feature Pills -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10 animate-slide-up" style="animation-delay: 0.2s;">
+                <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium flex items-center space-x-2">
+                    <i class="fas fa-school"></i>
+                    <span>School Projects</span>
+                </span>
+                <span class="px-4 py-2 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full text-sm font-medium flex items-center space-x-2">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>College Projects</span>
+                </span>
+                <span class="px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium flex items-center space-x-2">
+                    <i class="fas fa-university"></i>
+                    <span>University Projects</span>
+                </span>
+                <span class="px-4 py-2 bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium flex items-center space-x-2">
+                    <i class="fas fa-robot"></i>
+                    <span>Robotics & IoT</span>
+                </span>
+                <span class="px-4 py-2 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300 rounded-full text-sm font-medium flex items-center space-x-2">
+                    <i class="fas fa-trophy"></i>
+                    <span>Science Fair</span>
+                </span>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 animate-slide-up" style="animation-delay: 0.3s;">
+                <a href="#projects" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 transition-all hover:scale-105 space-x-2">
+                    <i class="fas fa-eye"></i>
+                    <span>Explore Projects</span>
+                </a>
+                <a href="https://wa.me/8801XXXXXXXXX?text=Hello!%20I'm%20interested%20in%20ordering%20a%20science%20project.%20Please%20provide%20details." 
+                   target="_blank" 
+                   class="inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-semibold rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 shadow-lg transition-all hover:scale-105 space-x-2">
+                    <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                    <span>Get a Quote</span>
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.4s;">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-1">50+</div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm">Projects Completed</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-1">100+</div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm">Happy Students</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-1">5+</div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm">Years Experience</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <div class="text-3xl md:text-4xl font-bold gradient-text mb-1">15+</div>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm">Awards Won</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#projects" class="flex flex-col items-center text-gray-400 dark:text-gray-500 hover:text-primary-500 transition-colors">
+                <span class="text-sm mb-2">Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold mb-4">
+                    OUR PORTFOLIO
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Explore our collection of innovative science and technology projects designed for students at all levels.
+                </p>
+            </div>
+            
+            <!-- Search & Filter Bar -->
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-6 mb-10">
+                
+                <!-- Search Input -->
+                <div class="relative w-full lg:w-80">
+                    <input type="text" 
+                           id="searchInput" 
+                           placeholder="Search projects..." 
+                           class="w-full pl-12 pr-4 py-3 bg-gray-100 dark:bg-gray-700 border-2 border-transparent focus:border-primary-500 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 outline-none transition-all">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-2" id="filterContainer">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="all">
+                        <i class="fas fa-layer-group mr-1"></i> All
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="school">
+                        <i class="fas fa-school mr-1"></i> School
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="college">
+                        <i class="fas fa-graduation-cap mr-1"></i> College
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="university">
+                        <i class="fas fa-university mr-1"></i> University
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="robotics">
+                        <i class="fas fa-robot mr-1"></i> Robotics
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all" data-category="iot">
+                        <i class="fas fa-wifi mr-1"></i> IoT
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+            
+            <!-- Loading State -->
+            <div id="loadingState" class="flex justify-center items-center py-20">
+                <div class="loader"></div>
+            </div>
+            
+            <!-- No Results State -->
+            <div id="noResults" class="hidden text-center py-20">
+                <div class="text-6xl text-gray-300 dark:text-gray-600 mb-4">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-700 dark:text-gray-300 mb-2">No projects found</h3>
+                <p class="text-gray-500 dark:text-gray-400">Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 bg-accent-100 dark:bg-accent-900/50 text-accent-700 dark:text-accent-300 rounded-full text-sm font-semibold mb-4">
+                    WHAT WE OFFER
+                </span>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    Our <span class="gradient-text">Services</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    We provide comprehensive project solutions for students at every academic level.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Service 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-school text-3xl text-blue-600 dark:text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">School Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Creative and educational projects perfect for school science fairs and exhibitions. Easy to understand and present.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <span class="text-primary-600 dark:text-primary-400 font-semibold text-sm">Starting from ৳1,500</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap text-3xl text-green-600 dark:text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">College Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Semester projects and assignments with detailed documentation, reports, and presentation materials included.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <span class="text-primary-600 dark:text-primary-400 font-semibold text-sm">Starting from ৳3,000</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-robot text-3xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Robotics & IoT</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Advanced robotics and Internet of Things projects using Arduino, ESP32, Raspberry Pi, and more.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <span class="text-primary-600 dark:text-primary-400 font-semibold text-sm">Starting from ৳4,000</span>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-university text-3xl text-orange-600 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">University Research</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Final year projects and research implementations with thesis documentation and defense preparation.
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <span class="text-primary-600 dark:text-primary-400 font-semibold text-sm">Starting from ৳8,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <div class="aspect-square bg-gradient-to-br from-primary-500 to-accent-500 p-1 rounded-3xl">
+                            <div class="w-full h-full bg-white dark:bg-gray-800 rounded-3xl flex items-center justify-center">
+                                <div class="text-center p-8">
+                                    <div class="relative inline-block mb-6">
+                                        <i class="fas fa-flask text-8xl gradient-text"></i>
+                                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-star text-white text-sm"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Our Laboratory</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Where Innovation Meets Education</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-700 rounded-2xl shadow-2xl p-4 animate-float">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-trophy text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 dark:text-white text-lg">15+</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">Awards Won</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div>
+                    <span class="inline-block px-4 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold mb-4">
+                        ABOUT US
+                    </span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                        Your Trusted Partner for <span class="gradient-text">Science Projects</span>
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        Research Lab Kumarkhali is a dedicated science and technology project laboratory that helps students bring their ideas to life. We specialize in creating innovative projects for school science fairs, college assignments, and university-level research.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                        Our team of experienced engineers and scientists work closely with students to design, build, and document projects that not only meet academic requirements but also inspire curiosity and innovation.
+                    </p>
+                    
+                    <!-- Features List -->
+                    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">Custom Projects</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">Expert Guidance</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">Full Documentation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-check text-green-600 dark:text-green-400"></i>
+                            </div>
+                            <span class="text-gray-700 dark:text-gray-300 font-medium">After-Sale Support</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="#contact" class="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white font-semibold rounded-xl shadow-lg transition-all hover:scale-105">
+                        <span>Get Started</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary-500 to-accent-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden">
+                <div class="grid lg:grid-cols-2">
+                    
+                    <!-- Contact Info -->
+                    <div class="p-8 md:p-12 bg-gray-50 dark:bg-gray-900">
+                        <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                            Get In <span class="gradient-text">Touch</span>
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8">
+                            Have a project idea? We'd love to hear from you. Contact us for a free consultation and quote.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <!-- Location -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Location</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Kumarkhali, Kushtia, Bangladesh</p>
+                                </div>
+                            </div>
+                            
+                            <!-- WhatsApp -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-green-600 dark:text-green-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">WhatsApp</h4>
+                                    <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">+880 1XXX-XXXXXX</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-envelope text-red-600 dark:text-red-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Email</h4>
+                                    <a href="mailto:info@researchlabkumarkhali.com" class="text-primary-600 dark:text-primary-400 hover:underline">info@researchlabkumarkhali.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="mt-10">
+                            <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
+                            <div class="flex space-x-3">
+                                <a href="#" class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white hover:bg-blue-700 transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center text-white hover:bg-red-700 transition-colors">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white hover:from-purple-600 hover:to-pink-600 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-gray-800 dark:bg-gray-700 rounded-xl flex items-center justify-center text-white hover:bg-gray-900 dark:hover:bg-gray-600 transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp CTA -->
+                    <div class="p-8 md:p-12 flex flex-col justify-center items-center text-center bg-white dark:bg-gray-800">
+                        <div class="w-24 h-24 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mb-6 animate-pulse">
+                            <i class="fab fa-whatsapp text-6xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            Quick Contact via WhatsApp
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8 max-w-sm">
+                            Get instant responses! Send us a message on WhatsApp to discuss your project requirements and get a free quote.
+                        </p>
+                        <a href="https://wa.me/8801XXXXXXXXX?text=Hello!%20I'm%20interested%20in%20your%20science%20projects.%20Please%20provide%20more%20information." 
+                           target="_blank" 
+                           class="inline-flex items-center space-x-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl shadow-lg shadow-green-500/30 transition-all hover:scale-105">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <p class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                            <i class="fas fa-clock mr-1"></i> Response within 1 hour (9 AM - 9 PM)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-flask text-white"></i>
+                        </div>
+                        <span class="font-display font-bold text-xl">Research Lab Kumarkhali</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Your trusted partner for innovative science and technology projects. We help students turn their ideas into reality with professional guidance and support.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-facebook-f text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-youtube text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-instagram text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-github text-lg"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Categories -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">School Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">College Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">University Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Robotics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">IoT Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © <span id="currentYear">2024</span> Research Lab Kumarkhali. All rights reserved. 
+                    <span class="text-red-500">❤</span> Made in Bangladesh
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== PROJECT DETAIL MODAL ==================== -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="min-h-screen px-4 pt-4 pb-20 text-center sm:p-0">
+            
+            <!-- Backdrop -->
+            <div id="modalBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity"></div>
+            
+            <!-- Modal Content -->
+            <div class="inline-block w-full max-w-4xl my-8 text-left align-middle transition-all transform bg-white dark:bg-gray-800 rounded-3xl shadow-2xl modal-content">
+                
+                <!-- Close Button -->
+                <button id="closeModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-white/80 dark:bg-gray-700/80 backdrop-blur rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-700 transition-colors shadow-lg">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <!-- Image Slider -->
+                <div class="relative h-64 sm:h-80 md:h-96 rounded-t-3xl overflow-hidden bg-gray-100 dark:bg-gray-700">
+                    <div id="imageSlider" class="slider flex h-full">
+                        <!-- Images loaded dynamically -->
+                    </div>
+                    
+                    <!-- Slider Controls -->
+                    <button id="prevSlide" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-lg">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="nextSlide" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur rounded-full flex items-center justify-center text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-colors shadow-lg">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Slide Indicators -->
+                    <div id="slideIndicators" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                        <!-- Indicators loaded dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Project Details -->
+                <div class="p-6 sm:p-8">
+                    
+                    <!-- Badges -->
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span id="modalCategory" class="px-3 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium"></span>
+                        <span id="modalPrice" class="px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full text-sm font-medium"></span>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h2 id="modalTitle" class="font-display text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4"></h2>
+                    
+                    <!-- Description -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                            <i class="fas fa-info-circle text-primary-500 mr-2"></i>
+                            Description
+                        </h3>
+                        <p id="modalDescription" class="text-gray-600 dark:text-gray-400 leading-relaxed"></p>
+                    </div>
+                    
+                    <!-- Technologies -->
+                    <div class="mb-6">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                            <i class="fas fa-microchip text-primary-500 mr-2"></i>
+                            Technologies Used
+                        </h3>
+                        <div id="modalTechnologies" class="flex flex-wrap gap-2">
+                            <!-- Technologies loaded dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- YouTube Video -->
+                    <div id="videoSection" class="mb-6">
+                        <h3 class="font-semibold text-gray-900 dark:text-white mb-2 flex items-center">
+                            <i class="fab fa-youtube text-red-500 mr-2"></i>
+                            Project Demo Video
+                        </h3>
+                        <div class="aspect-video rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700">
+                            <iframe id="modalVideo" class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a id="orderWhatsApp" href="#" target="_blank" class="flex-1 inline-flex items-center justify-center space-x-2 px-6 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl shadow-lg shadow-green-500/30 transition-all hover:scale-105">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                            <span>Order This Project</span>
+                        </a>
+                        <button id="backToProjects" class="flex-1 inline-flex items-center justify-center space-x-2 px-6 py-4 bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white font-semibold rounded-xl border-2 border-gray-200 dark:border-gray-600 hover:border-primary-500 dark:hover:border-primary-500 transition-all">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Back to Projects</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+    // ============================================================
+    // CONFIGURATION - EDIT THESE VALUES
+    // ============================================================
+    
+    // Your WhatsApp Number (without + sign, include country code)
+    const WHATSAPP_NUMBER = "8801XXXXXXXXX"; // Replace with your number
+    
+    // ============================================================
+    // PROJECT DATA - EDIT THIS ARRAY TO ADD/UPDATE PROJECTS
+    // ============================================================
+    const projectsData = [
+        {
+            id: 1,
+            title: "Smart Home Automation System",
+            shortDescription: "Control your home appliances with smartphone",
+            fullDescription: "A comprehensive smart home automation system that allows you to control lights, fans, AC, and other appliances using your smartphone or voice commands. The system uses ESP32 microcontroller with Blynk app integration for seamless control from anywhere in the world. Features include scheduling, energy monitoring, and voice control via Google Assistant.",
+            category: "iot",
+            price: "৳5,000 - ৳8,000",
+            thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+                "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
+                "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800"
+            ],
+                        technologies: ["ESP32", "Arduino", "Blynk IoT", "Relay Module", "Mobile App"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 2,
+            title: "Line Following Robot",
+            shortDescription: "Autonomous robot that follows black lines",
+            fullDescription: "An intelligent line following robot built using Arduino that can autonomously navigate along black lines on white surfaces. Perfect for robotics competitions and learning basic robotics concepts. Features include adjustable speed, PID control for smooth turns, and obstacle detection.",
+            category: "robotics",
+            price: "৳2,500 - ৳4,000",
+            thumbnail: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+                "https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?w=800",
+                "https://images.unsplash.com/photo-1561144257-e32e8506e14d?w=800"
+            ],
+            technologies: ["Arduino Uno", "IR Sensors", "L298N Motor Driver", "DC Motors", "Chassis Kit"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 3,
+            title: "Solar Powered Water Pump",
+            shortDescription: "Eco-friendly irrigation system using solar energy",
+            fullDescription: "A sustainable water pumping solution powered entirely by solar energy. Ideal for agricultural projects and science fairs demonstrating renewable energy concepts. The system includes a solar panel, charge controller, battery backup, and automatic water level sensing for efficient operation.",
+            category: "school",
+            price: "৳1,500 - ৳3,000",
+            thumbnail: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800",
+                "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800",
+                "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800"
+            ],
+            technologies: ["Solar Panel", "DC Water Pump", "Charge Controller", "Battery", "Float Switch"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        },
+        {
+            id: 4,
+            title: "Gesture Controlled Robot",
+            shortDescription: "Control robot with hand movements",
+            fullDescription: "An innovative robot that responds to hand gestures using an accelerometer sensor. Move your hand to control the robot's direction - tilt forward to move forward, tilt backward to reverse, and tilt left or right to turn. Uses wireless RF communication for seamless control up to 100 meters.",
+            category: "robotics",
+            price: "৳4,000 - ৳6,000",
+            thumbnail: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800",
+                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+                "https://images.unsplash.com/photo-1561144257-e32e8506e14d?w=800"
+            ],
+            technologies: ["Arduino Nano", "MPU6050 Accelerometer", "RF Module", "L293D Motor Shield", "Glove Transmitter"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 5,
+            title: "Weather Monitoring Station",
+            shortDescription: "Real-time weather data collection system",
+            fullDescription: "A complete weather monitoring station that measures temperature, humidity, pressure, rainfall, and wind speed. Data is displayed on an LCD screen and can be logged to an SD card or sent to cloud platforms for remote monitoring. Perfect for environmental science projects.",
+            category: "college",
+            price: "৳4,500 - ৳7,000",
+            thumbnail: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800",
+                "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800",
+                "https://images.unsplash.com/photo-1530908295418-a12e326966ba?w=800"
+            ],
+            technologies: ["Arduino Mega", "DHT22", "BMP280", "Rain Sensor", "Anemometer", "LCD Display"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        },
+        {
+            id: 6,
+            title: "Smart Parking System",
+            shortDescription: "IoT-based parking slot detection system",
+            fullDescription: "An intelligent parking management system that detects available parking slots using ultrasonic sensors and displays real-time availability on a mobile app. Features include slot reservation, automatic gate control, and payment integration. Ideal for final year engineering projects.",
+            category: "university",
+            price: "৳8,000 - ৳12,000",
+            thumbnail: "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800",
+                "https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?w=800",
+                "https://images.unsplash.com/photo-1545179605-4d709c840766?w=800"
+            ],
+            technologies: ["NodeMCU ESP8266", "Ultrasonic Sensors", "Servo Motors", "Firebase", "Android App"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 7,
+            title: "Fire Detection & Alert System",
+            shortDescription: "Automatic fire detection with SMS alerts",
+            fullDescription: "A life-saving fire detection system that monitors smoke and temperature levels. When fire is detected, it automatically triggers an alarm, activates water sprinklers, and sends SMS alerts to registered phone numbers. Includes a web dashboard for monitoring.",
+            category: "iot",
+            price: "৳3,500 - ৳5,500",
+            thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800",
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+                "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+            ],
+            technologies: ["Arduino", "MQ2 Smoke Sensor", "Temperature Sensor", "GSM Module", "Buzzer", "Relay"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        },
+        {
+            id: 8,
+            title: "Automatic Plant Watering System",
+            shortDescription: "Smart irrigation based on soil moisture",
+            fullDescription: "An automated plant watering system that monitors soil moisture levels and waters plants only when needed. The system conserves water while ensuring optimal plant health. Features include multiple zone control, scheduling, and mobile app monitoring.",
+            category: "school",
+            price: "৳1,200 - ৳2,500",
+            thumbnail: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800",
+                "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800",
+                "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800"
+            ],
+            technologies: ["Arduino Uno", "Soil Moisture Sensor", "Water Pump", "Relay Module", "LCD Display"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        },
+        {
+            id: 9,
+            title: "Bluetooth Controlled Car",
+            shortDescription: "Smartphone controlled RC car using Bluetooth",
+            fullDescription: "A fun and educational project to build a smartphone-controlled car using Bluetooth connectivity. Control the car's movement, speed, and even LED lights from a custom Android app. Perfect for learning wireless communication and motor control.",
+            category: "school",
+            price: "৳2,000 - ৳3,500",
+            thumbnail: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+                "https://images.unsplash.com/photo-1561144257-e32e8506e14d?w=800"
+            ],
+            technologies: ["Arduino Uno", "HC-05 Bluetooth", "L298N Motor Driver", "DC Motors", "Android App"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        },
+        {
+            id: 10,
+            title: "RFID Based Attendance System",
+            shortDescription: "Automated attendance tracking using RFID cards",
+            fullDescription: "A modern attendance management system that uses RFID technology to automatically record student or employee attendance. Data is stored in a database and can be exported to Excel. Includes a web-based admin panel for reports and analytics.",
+            category: "college",
+            price: "৳4,000 - ৳6,500",
+            thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+                "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+            ],
+            technologies: ["Arduino", "RFID RC522", "LCD Display", "RTC Module", "SD Card", "Web Interface"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 11,
+            title: "Voice Controlled Home Automation",
+            shortDescription: "Control appliances with voice commands",
+            fullDescription: "Transform your home into a smart home with voice-controlled automation. Use simple voice commands to turn on/off lights, fans, and other appliances. Works with both local commands and Google Assistant/Alexa integration for remote control.",
+            category: "university",
+            price: "৳6,500 - ৳10,000",
+            thumbnail: "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+                "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800",
+                "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800"
+            ],
+            technologies: ["Raspberry Pi", "Google Speech API", "Relay Module", "Python", "MQTT", "Node-RED"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: true
+        },
+        {
+            id: 12,
+            title: "Obstacle Avoiding Robot",
+            shortDescription: "Self-navigating robot using ultrasonic sensors",
+            fullDescription: "An intelligent robot that can navigate autonomously by detecting and avoiding obstacles in its path. Uses ultrasonic sensors to measure distances and makes real-time decisions to change direction. Great for understanding basic AI and sensor fusion.",
+            category: "robotics",
+            price: "৳3,000 - ৳4,500",
+            thumbnail: "https://images.unsplash.com/photo-1561144257-e32e8506e14d?w=400&h=300&fit=crop",
+            images: [
+                "https://images.unsplash.com/photo-1561144257-e32e8506e14d?w=800",
+                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800",
+                "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800"
+            ],
+            technologies: ["Arduino Uno", "HC-SR04 Ultrasonic", "Servo Motor", "L293D Shield", "Chassis Kit"],
+            youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            featured: false
+        }
+    ];
+
+    // ============================================================
+    // MAIN APPLICATION CODE - DO NOT EDIT UNLESS NECESSARY
+    // ============================================================
+    
+    // DOM Elements
+    const projectsGrid = document.getElementById('projectsGrid');
+    const loadingState = document.getElementById('loadingState');
+    const noResults = document.getElementById('noResults');
+    const searchInput = document.getElementById('searchInput');
+    const filterContainer = document.getElementById('filterContainer');
+    const projectModal = document.getElementById('projectModal');
+    const modalBackdrop = document.getElementById('modalBackdrop');
+    const closeModal = document.getElementById('closeModal');
+    const backToProjects = document.getElementById('backToProjects');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const navbar = document.getElementById('navbar');
+
+    // State
+    let currentFilter = 'all';
+    let currentSlide = 0;
+    let currentProject = null;
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeDarkMode();
+        createParticles();
+        renderProjects(projectsData);
+        setupEventListeners();
+        setCurrentYear();
+    });
+
+    // Set Current Year
+    function setCurrentYear() {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    }
+
+    // Dark Mode
+    function initializeDarkMode() {
+        const isDark = localStorage.getItem('darkMode') === 'true' || 
+                       (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (isDark) {
+            document.documentElement.classList.add('dark');
+        }
+    }
+
+    function toggleDarkMode() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+    }
+
+    // Create Floating Particles
+    function createParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const colors = ['#3b82f6', '#10b981', '#6366f1', '#f59e0b'];
+        
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.cssText = `
+                width: ${Math.random() * 20 + 5}px;
+                height: ${Math.random() * 20 + 5}px;
+                background: ${colors[Math.floor(Math.random() * colors.length)]};
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                animation-delay: ${Math.random() * 5}s;
+                animation-duration: ${Math.random() * 10 + 5}s;
+            `;
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // Render Project Cards
+    function renderProjects(projects) {
+        loadingState.classList.add('hidden');
+        
+        if (projects.length === 0) {
+            noResults.classList.remove('hidden');
+            projectsGrid.innerHTML = '';
+            return;
+        }
+        
+        noResults.classList.add('hidden');
+        
+        projectsGrid.innerHTML = projects.map((project, index) => `
+            <div class="project-card bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden opacity-0 animate-fade-in" 
+                 style="animation-delay: ${index * 0.1}s; animation-fill-mode: forwards;"
+                 data-category="${project.category}">
+                
+                <!-- Image Container -->
+                <div class="relative h-48 overflow-hidden bg-gray-100 dark:bg-gray-600">
+                    <img src="${project.thumbnail}" 
+                         alt="${project.title}" 
+                         class="card-image w-full h-full object-cover transition-transform duration-500"
+                         loading="lazy"
+                         onerror="this.src='https://via.placeholder.com/400x300?text=Project+Image'">
+                    
+                    <!-- Featured Badge -->
+                    ${project.featured ? `
+                    <div class="absolute top-3 left-3 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold rounded-full shadow-lg">
+                        <i class="fas fa-star mr-1"></i> Featured
+                    </div>
+                    ` : ''}
+                    
+                    <!-- Category Badge -->
+                    <div class="absolute top-3 right-3 px-3 py-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur text-gray-700 dark:text-gray-200 text-xs font-semibold rounded-full capitalize">
+                        ${project.category}
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="p-5">
+                    <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-2 line-clamp-1">
+                        ${project.title}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+                        ${project.shortDescription}
+                    </p>
+                    
+                    <!-- Price & Button -->
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary-600 dark:text-primary-400 font-bold text-sm">
+                            ${project.price}
+                        </span>
+                        <button onclick="openProjectModal(${project.id})" 
+                                class="px-4 py-2 bg-gradient-to-r from-primary-500 to-accent-500 hover:from-primary-600 hover:to-accent-600 text-white text-sm font-semibold rounded-lg shadow-md hover:shadow-lg transition-all hover:scale-105">
+                            <i class="fas fa-eye mr-1"></i> View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Filter Projects
+    function filterProjects(category) {
+        currentFilter = category;
+        
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.category === category) {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Filter and render
+        let filtered = category === 'all' 
+            ? projectsData 
+            : projectsData.filter(p => p.category === category);
+        
+        // Apply search filter if exists
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (searchTerm) {
+            filtered = filtered.filter(p => 
+                p.title.toLowerCase().includes(searchTerm) ||
+                p.shortDescription.toLowerCase().includes(searchTerm) ||
+                p.technologies.some(t => t.toLowerCase().includes(searchTerm))
+            );
+        }
+        
+        renderProjects(filtered);
+    }
+
+    // Search Projects
+    function searchProjects() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        let filtered = currentFilter === 'all' 
+            ? projectsData 
+            : projectsData.filter(p => p.category === currentFilter);
+        
+        if (searchTerm) {
+            filtered = filtered.filter(p => 
+                p.title.toLowerCase().includes(searchTerm) ||
+                p.shortDescription.toLowerCase().includes(searchTerm) ||
+                p.technologies.some(t => t.toLowerCase().includes(searchTerm))
+            );
+        }
+        
+        renderProjects(filtered);
+    }
+
+    // Open Project Modal
+    function openProjectModal(projectId) {
+        currentProject = projectsData.find(p => p.id === projectId);
+        if (!currentProject) return;
+        
+        currentSlide = 0;
+        
+        // Populate modal
+        document.getElementById('modalTitle').textContent = currentProject.title;
+        document.getElementById('modalDescription').textContent = currentProject.fullDescription;
+        document.getElementById('modalCategory').textContent = currentProject.category.charAt(0).toUpperCase() + currentProject.category.slice(1);
+        document.getElementById('modalPrice').innerHTML = `<i class="fas fa-tag mr-1"></i>${currentProject.price}`;
+        
+        // Technologies
+        const techContainer = document.getElementById('modalTechnologies');
+        techContainer.innerHTML = currentProject.technologies.map(tech => `
+            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium">
+                ${tech}
+            </span>
+        `).join('');
+        
+        // Images Slider
+        const slider = document.getElementById('imageSlider');
+        slider.innerHTML = currentProject.images.map(img => `
+            <div class="flex-shrink-0 w-full h-full">
+                <img src="${img}" alt="${currentProject.title}" class="w-full h-full object-cover" 
+                     onerror="this.src='https://via.placeholder.com/800x400?text=Project+Image'">
+            </div>
+        `).join('');
+        slider.style.transform = 'translateX(0)';
+        
+        // Slide Indicators
+        const indicators = document.getElementById('slideIndicators');
+        indicators.innerHTML = currentProject.images.map((_, index) => `
+            <button onclick="goToSlide(${index})" 
+                    class="w-2 h-2 rounded-full transition-all ${index === 0 ? 'bg-white w-6' : 'bg-white/50'}">
+            </button>
+        `).join('');
+        
+        // YouTube Video
+        const videoSection = document.getElementById('videoSection');
+        const videoFrame = document.getElementById('modalVideo');
+        if (currentProject.youtubeUrl) {
+            videoSection.classList.remove('hidden');
+            videoFrame.src = currentProject.youtubeUrl;
+        } else {
+            videoSection.classList.add('hidden');
+            videoFrame.src = '';
+        }
+        
+        // WhatsApp Order Button
+        const orderBtn = document.getElementById('orderWhatsApp');
+        const message = encodeURIComponent(`Hello! I'm interested in ordering the "${currentProject.title}" project.\n\nPrice Range: ${currentProject.price}\n\nPlease provide more details about pricing and delivery time.`);
+        orderBtn.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+        
+        // Show Modal
+        projectModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close Modal
+    function closeProjectModal() {
+        projectModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        document.getElementById('modalVideo').src = '';
+    }
+
+    // Image Slider Controls
+    function goToSlide(index) {
+        if (!currentProject) return;
+        currentSlide = index;
+        const slider = document.getElementById('imageSlider');
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        updateIndicators();
+    }
+
+    function nextSlide() {
+        if (!currentProject) return;
+        currentSlide = (currentSlide + 1) % currentProject.images.length;
+        goToSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        if (!currentProject) return;
+        currentSlide = (currentSlide - 1 + currentProject.images.length) % currentProject.images.length;
+        goToSlide(currentSlide);
+    }
+
+    function updateIndicators() {
+        const indicators = document.querySelectorAll('#slideIndicators button');
+        indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+                indicator.classList.remove('bg-white/50');
+                indicator.classList.add('bg-white', 'w-6');
+            } else {
+                indicator.classList.add('bg-white/50');
+                indicator.classList.remove('bg-white', 'w-6');
+            }
+        });
+    }
+
+    // Navbar Scroll Effect
+    function handleScroll() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow-lg');
+        } else {
+            navbar.classList.remove('shadow-lg');
+        }
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+        } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        }
+    }
+
+    // Setup Event Listeners
+    function setupEventListeners() {
+        // Dark Mode Toggle
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        
+        // Mobile Menu
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+        
+        // Search Input
+        searchInput.addEventListener('input', debounce(searchProjects, 300));
+        
+        // Filter Buttons
+        filterContainer.addEventListener('click', (e) => {
+            if (e.target.closest('.filter-btn')) {
+                const category = e.target.closest('.filter-btn').dataset.category;
+                filterProjects(category);
+            }
+        });
+        
+        // Modal Events
+        closeModal.addEventListener('click', closeProjectModal);
+        backToProjects.addEventListener('click', closeProjectModal);
+        modalBackdrop.addEventListener('click', closeProjectModal);
+        
+        // Slider Controls
+        document.getElementById('prevSlide').addEventListener('click', prevSlide);
+        document.getElementById('nextSlide').addEventListener('click', nextSlide);
+        
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (!projectModal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeProjectModal();
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
+            }
+        });
+        
+        // Scroll Events
+        window.addEventListener('scroll', handleScroll);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    }
+
+    // Utility: Debounce Function
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+
+    // Make functions globally accessible
+    window.openProjectModal = openProjectModal;
+    window.goToSlide = goToSlide;
+    </script>
+
+</body>
+</html>
