@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Research Lab Kumarkhali</title>
+    <meta name="description" content="Explore our science project services for school, college, and university students.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                        accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .dark .glass { background: rgba(30, 41, 59, 0.8); }
+        .hover-underline { position: relative; }
+        .hover-underline::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background: linear-gradient(90deg, #3b82f6, #10b981); transition: width 0.3s ease; }
+        .hover-underline:hover::after { width: 100%; }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 font-sans">
+    
+    <div id="navigation"></div>
+    
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="inline-block px-4 py-1 bg-accent-100 dark:bg-accent-900/50 text-accent-700 dark:text-accent-300 rounded-full text-sm font-semibold mb-4">
+                OUR SERVICES
+            </span>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                What We <span class="gradient-text">Offer</span>
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Comprehensive project solutions for students at every academic level.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Services Grid -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-school text-4xl text-blue-600 dark:text-blue-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">School Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Creative and educational projects perfect for school science fairs, exhibitions, and classroom presentations. Easy to understand, build, and present.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Science fair projects
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Working models
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Presentation materials
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">৳1,500+</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-green-100 dark:bg-green-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-graduation-cap text-4xl text-green-600 dark:text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">College Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Semester projects and assignments with detailed documentation, circuit diagrams, reports, and presentation materials for diploma and degree students.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Semester projects
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Lab assignments
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full documentation
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">৳3,000+</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-purple-100 dark:bg-purple-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-university text-4xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">University Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Final year projects and research implementations with complete thesis documentation, IEEE paper format, and defense preparation support.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Final year projects
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Research papers
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Defense preparation
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">৳8,000+</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-orange-100 dark:bg-orange-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-robot text-4xl text-orange-600 dark:text-orange-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Robotics</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Custom robotic solutions including line followers, obstacle avoiders, arm manipulators, and competition-ready robots for national events.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Competition robots
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Custom designs
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Programming included
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">৳4,000+</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-cyan-100 dark:bg-cyan-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-wifi text-4xl text-cyan-600 dark:text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">IoT Solutions</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Internet of Things projects including smart home, environmental monitoring, industrial automation, and cloud-connected systems.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Smart home systems
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Cloud integration
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Mobile app control
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">৳5,000+</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-50 dark:bg-gray-700 rounded-3xl p-8 hover:shadow-2xl transition-all hover:-translate-y-2 group">
+                    <div class="w-20 h-20 bg-red-100 dark:bg-red-900/50 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tools text-4xl text-red-600 dark:text-red-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Custom Projects</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Have a unique idea? We can build custom projects tailored to your specific requirements, timeline, and budget.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Custom designs
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Flexible requirements
+                        </li>
+                        <li class="flex items-center text-gray-600 dark:text-gray-400 text-sm">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Consultation included
+                        </li>
+                    </ul>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-600">
+                        <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">Custom</span>
+                        <a href="contact.html" class="px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-colors">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                    Our <span class="gradient-text">Process</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400">How we work with you to bring your project to life.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">1</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Consultation</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Discuss your requirements and get expert advice.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">2</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Design</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">We design and plan your project specifications.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">3</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Build</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Our team builds and tests your project.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">4</div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2">Delivery</h4>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Receive your project with documentation and support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer"></div>
+    
+    <script src="js/projects-data.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.getElementById('navigation').innerHTML = getNavigation('services');
+        document.getElementById('footer').innerHTML = getFooter();
+        initCommon();
+    </script>
+</body>
+</html>
