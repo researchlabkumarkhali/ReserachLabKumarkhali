@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Research Lab Kumarkhali</title>
+    <meta name="description" content="Learn about Research Lab Kumarkhali - Your trusted partner for science and technology projects.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                        accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Space Grotesk', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text { background: linear-gradient(135deg, #3b82f6, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); }
+        .dark .glass { background: rgba(30, 41, 59, 0.8); }
+        .hover-underline { position: relative; }
+        .hover-underline::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0; background: linear-gradient(90deg, #3b82f6, #10b981); transition: width 0.3s ease; }
+        .hover-underline:hover::after { width: 100%; }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 font-sans transition-colors duration-300">
+    
+    <!-- Navigation will be inserted here -->
+    <div id="navigation"></div>
+    
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-1 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold mb-4">
+                ABOUT US
+            </span>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Who We <span class="gradient-text">Are</span>
+            </h1>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                Learn about our journey, mission, and the team behind Research Lab Kumarkhali.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Our Story -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                        Our <span class="gradient-text">Story</span>
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        Research Lab Kumarkhali was founded in 2019 with a simple mission: to make science and technology accessible to every student. What started as a small workshop in Kumarkhali has now grown into a full-fledged project laboratory serving students across Bangladesh.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                        We noticed that many students struggle with their science fair projects, semester assignments, and final year projects due to lack of proper guidance and resources. Our team of engineers and educators came together to bridge this gap.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        Today, we've helped over 100 students successfully complete their projects, win science fairs, and achieve academic excellence. Our commitment to quality and innovation remains unchanged.
+                    </p>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-primary-500 to-accent-500 rounded-3xl p-8 text-white">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-4 bg-white/10 rounded-2xl">
+                                <div class="text-4xl font-bold mb-2">50+</div>
+                                <div class="text-sm opacity-80">Projects Completed</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-2xl">
+                                <div class="text-4xl font-bold mb-2">100+</div>
+                                <div class="text-sm opacity-80">Happy Students</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-2xl">
+                                <div class="text-4xl font-bold mb-2">5+</div>
+                                <div class="text-sm opacity-80">Years Experience</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/10 rounded-2xl">
+                                <div class="text-4xl font-bold mb-2">15+</div>
+                                <div class="text-sm opacity-80">Awards Won</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Mission -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/50 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-3xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        To empower students with practical knowledge and hands-on experience in science and technology through innovative projects. We strive to make learning fun, accessible, and impactful.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-accent-100 dark:bg-accent-900/50 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-3xl text-accent-600 dark:text-accent-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Our Vision</h3>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        To become the leading science project laboratory in Bangladesh, inspiring the next generation of scientists, engineers, and innovators. We envision a future where every student has access to quality STEM education.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                    Meet Our <span class="gradient-text">Team</span>
+                </h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    The passionate people behind Research Lab Kumarkhali.
+                </p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Team Member 1 -->
+                <div class="text-center group">
+                    <div class="relative w-40 h-40 mx-auto mb-6">
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-accent-500 p-1">
+                            <div class="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                                <i class="fas fa-user text-6xl text-gray-400"></i>
+                                <!-- Replace with actual image: <img src="team/member1.jpg" class="w-full h-full object-cover"> -->
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Your Name</h4>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">Founder & Lead Engineer</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Expert in Electronics, Robotics, and IoT systems with 5+ years of experience.</p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="text-center group">
+                    <div class="relative w-40 h-40 mx-auto mb-6">
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-accent-500 p-1">
+                            <div class="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                                <i class="fas fa-user text-6xl text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Team Member</h4>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">Project Manager</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Coordinates project timelines and ensures quality delivery to students.</p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="text-center group">
+                    <div class="relative w-40 h-40 mx-auto mb-6">
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-accent-500 p-1">
+                            <div class="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center overflow-hidden">
+                                <i class="fas fa-user text-6xl text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Team Member</h4>
+                    <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">Technical Support</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm">Provides technical assistance and after-sale support to customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-500 to-accent-500">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Project?</h2>
+            <p class="text-white/80 mb-8">Contact us today for a free consultation and quote.</p>
+            <a href="contact.html" class="inline-flex items-center space-x-2 px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+                <i class="fas fa-paper-plane"></i>
+                <span>Contact Us</span>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer will be inserted here -->
+    <div id="footer"></div>
+    
+    <!-- Scripts -->
+    <script src="js/projects-data.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.getElementById('navigation').innerHTML = getNavigation('about');
+        document.getElementById('footer').innerHTML = getFooter();
+        initCommon();
+    </script>
+</body>
+</html>
